@@ -25,9 +25,9 @@ public class MultiThreadedSumMatrix implements SumMatrix {
         }
         
         public void run() {
-            System.out.println("Working from position " + this.startpos + " to position"
+            System.out.println("Working from position " + this.startpos + " to position "
                     + (this.startpos + this.nelem -1));
-            for(int i = this.startpos ; i < this.startpos + this.nelem; i++) {
+            for(int i = this.startpos ; i < matrix.length && i < this.startpos + this.nelem; i++) {
                 for(int k = 0; k < matrix.length ; k++) {
                     this.res += matrix[i][k];
                 }
